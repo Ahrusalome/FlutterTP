@@ -6,14 +6,18 @@ import 'package:flutter/services.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class AuthPage extends StatefulWidget {
+  const AuthPage({super.key});
+
   @override
-  _AuthPageState createState() => _AuthPageState();
+  AuthPageState createState() => AuthPageState();
 }
 
-class _AuthPageState extends State<AuthPage> {
+class AuthPageState extends State<AuthPage> {
   final _usernameController = TextEditingController();
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
+  //Register function, will add a user in the authentification widget if the credentials seems logical, 
+  //if not, will display an error pop up
   void _register() async {
     try {
       UserCredential userCredential =
@@ -61,22 +65,6 @@ class _AuthPageState extends State<AuthPage> {
         'Successfully logged in with email : ${_emailController.text}');
   }
 
-  // void _addUser() async {
-  //   try {
-  //     await users.add({
-  //       'username': '_usernameController.text',
-  //       'email': '_emailController.text'
-  //     });
-  //   } catch (e) {
-  //     print('Error adding user : $e');
-  //   }
-  // }
-
-  // void _sendData() {
-  //   _register();
-  //   _addUser();
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -86,10 +74,6 @@ class _AuthPageState extends State<AuthPage> {
       body: Center(
           child: Column(
         children: [
-          // TextField(
-          //   decoration: const InputDecoration(hintText: "Username"),
-          //   controller: _usernameController,
-          // ),
           TextField(
             decoration: const InputDecoration(hintText: "Email"),
             controller: _emailController,

@@ -4,7 +4,7 @@
 # Description :
 
 This project is a school project. It has been made as an assignement for a flutter lesson.
-The goal was to learn how to create a note application handling a database (Firebase) and an authentification system so each user has it's own note.
+The goal was to learn how to create a note application handling a database (Firebase), an authentification system, and a storage file system so each user has it's own note with a possibility to upload a picture to it.
 
 
 # Functionnalities : 

@@ -89,19 +89,3 @@ void connectedUser() async {
     }
   });
 }
-
-// String connectedUserName() {
-//   User? connectedUser;
-//   FirebaseAuth.instance.userChanges().listen((User? user) {
-//     if (user == null) {
-//       print('User is currently signed out!');
-//     } else {
-//       connectedUser = user;
-//       users.where("email", isEqualTo: connectedUser?.email).get().then(
-//           (querySnapshot) {
-//         for (var docSnapshot in querySnapshot.docs) {}
-//       }, onError: (e) => print("Error completing: $e"));
-//     }
-//   });
-//   return "guest";
-// }
